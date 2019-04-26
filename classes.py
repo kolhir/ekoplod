@@ -66,12 +66,7 @@ class DataBase():
 
                 kwargs.update({key: user_dict[key]})
 
-        db = pymysql.connect(host='178.57.222.29',
-                             user='vilyachk_ekoplod',
-                             password='rQLcaxs2',
-                             db='vilyachk_ekoplod',
-                             charset='utf8mb4',
-                             cursorclass=pymysql.cursors.DictCursor)
+        db = pymysql.connect()
 
         cursor = db.cursor()
         sqlstr = "SELECT * FROM `cms_con_board` WHERE `category_id`="+category_id+""
